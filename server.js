@@ -13,6 +13,7 @@ dotenv.config({
   path: path.resolve(__dirname, "../.env"),
 });
 
+
 // Connect to the database
 connectDB();
 
