@@ -14,14 +14,14 @@ console.log(
 // ✅ CORS middleware (corrected and complete)
 app.use(
   cors({
-    origin: ["http://localhost:3000","https://nexa-frnt.vercel.app/"],
+    origin: ["http://localhost:3000","https://nexa-frnt.vercel.app"],
     credentials: true,
   })
 );
 
 // ✅ Handle preflight OPTIONS request for all routes
 app.options("*", cors({
-  origin: ["http://localhost:3000","https://nexa-frnt.vercel.app/"],
+  origin: ["http://localhost:3000","https://nexa-frnt.vercel.app"],
   credentials: true,
 }));
 
