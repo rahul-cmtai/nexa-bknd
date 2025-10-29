@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import mainRouter from "./routes/index.js";
+import ordersLeadsRouter from "./routes/ordersleads.routes.js";
 import { errorHandler } from "./middlewares/error.middleware.js";
 
 const app = express();
@@ -35,6 +36,8 @@ app.use(express.static("public"));
 
 // ✅ Main API routes
 app.use("/api/v1", mainRouter);
+// Non-versioned alias for orders leads: `${API_BASE}/api/orders-leads`
+app.use("/api/orders-leads", ordersLeadsRouter);
 
 // ✅ Error handler
 app.use(errorHandler);

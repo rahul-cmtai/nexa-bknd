@@ -77,34 +77,34 @@ const getRecentAdminOrders = asyncHandler(async (req, res) => {
 const createProduct = asyncHandler(async (req, res) => {
   // --- 1. Destructure Request Body ---
   const {
-    name,
-    description,
-    price,
-    salePrice,
-    originalPrice,
-    stock,
-    type,
-    category, // Added category field
-    gender,
-    tags,
-    color,
-    material,
-    adminPackagingWeight,
-    adminPackagingDimension,
-    dimensions,
-    stones,
-    jewelleryCategory,
-    materialType,
-    size,
-    // New UX fields
-    rating,
-    reviews,
-    badge,
-    features,
-    sizes,
-    firmness,
-    specifications,
-  } = req.body;
+      name,
+      description,
+      price,
+      salePrice,
+      originalPrice,
+      stock,
+      type,
+      category, // Added category field
+      gender,
+      tags,
+      color,
+      material,
+      adminPackagingWeight,
+      adminPackagingDimension,
+      dimensions,
+      stones,
+      jewelleryCategory,
+      materialType,
+      size,
+      // New UX fields
+      rating,
+      reviews,
+      badge,
+      features,
+      sizes,
+      firmness,
+      specifications,
+    } = req.body;
 
   // --- 2. Basic Validation ---
   const effectivePrice = price ?? salePrice;
