@@ -96,7 +96,7 @@ export const sendBulkEmail = async (emailList, subject, message, imageUrl) => {
     const emailHtml = generateEmailHTML(subject, message, imageUrl);
 
     const mailOptions = {
-      from: `"${process.env.APP_NAME || 'Gullnaaz'}" <${process.env.MAIL_USER}>`,
+      from: `"${process.env.APP_NAME || 'Nexa'}" <${process.env.MAIL_USER}>`,
       to: process.env.MAIL_USER,
       bcc: validEmails,
       subject: subject,
@@ -218,10 +218,10 @@ export const sendOrderConfirmationEmail = async (userEmail, order) => {
   try {
     const transporter = createTransporter();
     const emailHtml = generateOrderConfirmationHTML(order);
-    const subject = `Your ${process.env.APP_NAME || 'Gullnaaz'} Order Confirmation #${order._id}`;
+    const subject = `Your ${process.env.APP_NAME || 'Nexa'} Order Confirmation #${order._id}`;
     
     const mailOptions = {
-      from: `"${process.env.APP_NAME || 'Gullnaaz'}" <${process.env.MAIL_USER}>`,
+      from: `"${process.env.APP_NAME || 'Nexa'}" <${process.env.MAIL_USER}>`,
       to: userEmail,
       subject: subject,
       html: emailHtml,

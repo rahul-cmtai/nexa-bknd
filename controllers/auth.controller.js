@@ -22,7 +22,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   const emailHtml = `
     <div style="font-family: sans-serif; text-align: center; padding: 20px;">
-      <h2>Welcome to Gullnaaz!</h2>
+      <h2>Welcome to Nexa!</h2>
       <p>Hi ${name},</p>
       <p>Thank you for registering. Please use the following OTP to verify your email address. This OTP is valid for 10 minutes.</p>
       <p style="font-size: 24px; font-weight: bold; letter-spacing: 2px; background-color: #f0f0f0; padding: 10px 20px; border-radius: 5px; display: inline-block;">
@@ -168,7 +168,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
     <div style="font-family: sans-serif; text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px; max-width: 600px; margin: auto;">
       <h2 style="color: #333;">Password Reset Request</h2>
       <p style="color: #555; font-size: 16px;">Hi ${user.fullName},</p>
-      <p style="color: #555; font-size: 16px;">You requested a password reset for your Gullnaaz account. Please click the button below to set a new password. This link is valid for 10 minutes.</p>
+      <p style="color: #555; font-size: 16px;">You requested a password reset for your Nexa account. Please click the button below to set a new password. This link is valid for 10 minutes.</p>
       <a href="${resetUrl}" style="background-color: #878fba; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-size: 16px; margin: 20px 0;">
         Reset Password
       </a>
